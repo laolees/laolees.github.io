@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Laolees&#39;s Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name"></a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Laolees's Blog</a>
 </header>
@@ -220,24 +231,68 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            [Untitled Post]
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">576</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/04/22</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,105 +393,188 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/22/sed使用实记/">
-            
-                <span>[Untitled Post]</span>
-        </a>
-        <div class="abstract-content">
-            
-sed 使用记录 sed编辑命令
+            <main class="main post-page">
+    <article class="article-entry">
+        <hr>
+<h2 id="sed-使用记录"><a href="#sed-使用记录" class="headerlink" title="sed 使用记录"></a>sed 使用记录</h2><p> sed编辑命令</p>
+<table>
+<thead>
+<tr>
+<th>p</th>
+<th>打印匹配行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>打印文件行号</td>
+</tr>
+<tr>
+<td>a\</td>
+<td>在定位行之后追加文本</td>
+</tr>
+<tr>
+<td>i\</td>
+<td>在定位行之前插入文本</td>
+</tr>
+<tr>
+<td>d</td>
+<td>删除定位行</td>
+</tr>
+<tr>
+<td>c\</td>
+<td>用新文本替换定位文本</td>
+</tr>
+<tr>
+<td>s</td>
+<td>使用替换模式替换相应模式</td>
+</tr>
+<tr>
+<td>r</td>
+<td>从另一个文件读取文本</td>
+</tr>
+<tr>
+<td>w</td>
+<td>将文本写入到一个文件</td>
+</tr>
+<tr>
+<td>y</td>
+<td>变换字符,类似替换</td>
+</tr>
+<tr>
+<td>q</td>
+<td>第一个模式匹配完成后退出</td>
+</tr>
+<tr>
+<td>l</td>
+<td>显示与八进制ASCII码等价的控制字符</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>在定位行执行的命令组</td>
+</tr>
+<tr>
+<td>n</td>
+<td>读取下一个输入行，用下一个命令处理新的行</td>
+</tr>
+<tr>
+<td>h</td>
+<td>将模式缓冲区的文本复制到保持缓冲区</td>
+</tr>
+<tr>
+<td>H</td>
+<td>将模式缓冲区的文本追加到保持缓冲区</td>
+</tr>
+<tr>
+<td>x</td>
+<td>互换模式缓冲区和保持缓冲区的内容</td>
+</tr>
+<tr>
+<td>g</td>
+<td>将保持缓冲区的内容复制到模式缓冲区</td>
+</tr>
+<tr>
+<td>G</td>
+<td>将保持缓冲区你内容追加到模式缓冲区</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>g</th>
+<th>替换文本全部</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>与n选项结合只打印替换行</td>
+</tr>
+<tr>
+<td>w 文件名</td>
+<td>输出定向到一个文件</td>
+</tr>
+</tbody>
+</table>
+<p>Eg：</p>
+<ul>
+<li><p>-n打印文件第一行(不加选项，还会打印全部内容)</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -n <span class="string">'1p'</span> input</span><br><span class="line">sed -n <span class="string">'1,3p'</span> input</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>’=‘只打印对应内容的行号</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n <span class="string">'/string/='</span> input</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>-e 打印查询字符并显示行号</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -e <span class="string">'/string/='</span> -e <span class="string">'/string/p'</span> input</span><br></pre></td></tr></table></figure>
+<p>等价于sed ‘/string/{=;p}’ input`</p>
+</li>
+<li><p>a\在指定内容后追加</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'/string/a\append a new line.'</span> input</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在文件最后一行追加</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'$'</span>a\string input</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>替换文本</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed -n <span class="string">'/string/c\int'</span> input</span><br><span class="line">sed -n <span class="string">'s/string/int/2g'</span> input		<span class="comment">#替换第2个匹配到的字符串</span></span><br><span class="line">sed -n <span class="string">'/string/s#string#int#g'</span>	<span class="comment">#替换所有匹配到的字符串</span></span><br></pre></td></tr></table></figure>
+<p>错误用法(-ni选项不能连用)</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -ni <span class="string">'/string/c\int/p'</span> php.ini</span><br><span class="line">sed -ni <span class="string">'s/string/int/p'</span> php.ini</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除最后一行和最后一行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -e <span class="string">'$'</span>d  -e <span class="string">'1'</span>d input</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>只打印替换行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n <span class="string">'s/string/int/p'</span> input</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分别替换第n次匹配</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n <span class="string">'s/string/np'</span> input</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示控制字符（ASCII）</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -n <span class="string">'1,$'</span>l input</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>处理匹配行的下一行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed <span class="string">'/string/&#123;n;s/cf/lol/;&#125; input</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在指定字符串后/前添加内容</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s/index.html/&amp; index.php /'</span> httpd.conf</span><br><span class="line">sed -i <span class="string">'s/index.html/index.php &amp;/'</span> httpd.conf</span><br></pre></td></tr></table></figure>
+<p> &amp;就代表着指定的字符串位置</p>
+</li>
+</ul>
 
-
-
-p
-打印匹配行
-
-
-
-
-=
-打印文件行号
-
-
-a\
-在定位行之后追加文本
-
-
-i\
-在定位行之前插入文本
-
-
-d
-删除定位行
-
-
-c\
-用新文本替换定位文本
-
-
-s
-使用替换模式替换相应模式
-
-
-r
-从另一个文件读取文本
-
-
-w
-将文本写入到一个文件
-
-
-y
-变换字符,类似替换
-
-
-q
-第一个模式匹配完成后退出
-
-
-l
-显示与八进制ASCII码等价的控制字符
-
-
-{}
-在定位行执行的命令组
-
-
-n
-读取下一个输入行，用下一个命令处理新的行
-
-
-h
-将模式缓冲区的文本复制到保持缓冲区
-
-
-H
-将模式缓冲区的文本追加到保持缓冲区
-
-
-x
-互换模式缓冲...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/22</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
     </article>
+    <!-- license  -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://yoursite.com">John Doe</a>
+            </p><p>原文链接：<a href="http://yoursite.com/2019/04/22/sed使用实记/">http://yoursite.com/2019/04/22/sed使用实记/</a>
+            </p><p>发表日期：<a href="http://yoursite.com/2019/04/22/sed使用实记/">April 22nd 2019, 8:54:31 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/04/22/sed使用实记/">April 22nd 2019, 8:54:31 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+        </div>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -521,6 +659,24 @@ x
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#sed-使用记录"><span class="toc-number">1.</span> <span class="toc-text">sed 使用记录</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -634,6 +790,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
