@@ -346,12 +346,45 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href="/2019/04/23/command-Sed/">
+        <a class="abstract-title" href="/2019/04/23/ansible-automating/">
             
-                <span>command Sed</span>
+                <span>Ansible 从入门到放弃</span>
         </a>
         <div class="abstract-content">
-             sed编辑命令
+            
+Handler字段handler字段定义的任务可以被task的notify字段引用，用于该task如果执行的结果为changed（即在远端服务器上完成了实际操作），则被引用的handler执行；反之，则不执行。
+handler一般情况都是在所有task执行完之后，若被引用才执行。若果想让task执行完之后立刻执行引用的handler，可以用meta: flush_handlers字段。
+变量变量通过vars字段定义，可以同时定义多个键值对形式的变量，引用变量的格式。还可以将变量分成不同属性，分类引用。如果有大量变量，可以单独使用一个yml文件统一存放变量，通过vars_files字段直...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/23</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="ansible">ansible</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2019/04/23/command-Sed/">
+            
+                <span>Sed 实记</span>
+        </a>
+        <div class="abstract-content">
+             
+sed编辑命令
 
 
 
@@ -422,7 +455,7 @@ H
 
 
 x
-互换模式缓冲区和保持缓冲区的内...
+互换模式缓冲区和保持缓冲区的...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -550,9 +583,16 @@ x
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 1
+        Total : 2
         </div>
         <!-- search  -->
         
@@ -568,7 +608,12 @@ x
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/23</span><a class="archive-post-title" href="/2019/04/23/command-Sed/">command Sed</a>
+            <span class="archive-post-date">04/23</span><a class="archive-post-title" href="/2019/04/23/ansible-automating/">Ansible 从入门到放弃</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/23</span><a class="archive-post-title" href="/2019/04/23/command-Sed/">Sed 实记</a>
         </li>
     
     </ul></div>
@@ -579,6 +624,8 @@ x
         <span class="sidebar-tag-name" data-tags="shell"><span class="iconfont-archer">&#xe606;</span>shell</span>
     
         <span class="sidebar-tag-name" data-tags="sed"><span class="iconfont-archer">&#xe606;</span>sed</span>
+    
+        <span class="sidebar-tag-name" data-tags="ansible"><span class="iconfont-archer">&#xe606;</span>ansible</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
