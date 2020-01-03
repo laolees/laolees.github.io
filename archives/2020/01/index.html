@@ -78,6 +78,8 @@
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
     
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -202,10 +204,8 @@
 </head>
 
     
-        <body class="home-body">
     
-    
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
@@ -221,34 +221,21 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Laolees's Blog
-            <!-- 文章页  -->
-            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
-            
-            
-                无畏造英雄
-            
-            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
@@ -387,273 +374,10 @@ height:50vh;
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/11/07/Docker-ELK/">
-            
-                <span>使用 ELK (Elasticsearch + Logstash + Kibana) 搭建日志集中分析平台实践</span>
-        </a>
-        <div class="abstract-content">
-            使用 ELK (Elasticsearch + Logstash + Kibana) 搭建日志集中分析平台实践前言Elasticsearch + Logstash + Kibana （ ELK ）是一套开源的日志管理方案，分析网站的访问情况时我们一般会借助 Google/百度 /CNZZ 等方式嵌入 JS 做数据统计，但是当网站访问异常或者被攻击时我们需要在后台分析如 Nginx 的具体日志，而 Nginx 日志分割 /GoAccess/Awstats 都是相对简单的单节点解决方案，针对分布式集群或者数据量级较大时会显得心有余而力不足，而 ELK 的出现可以使我们从容面对新的挑战。
-
-L...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/11/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="elk">elk</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/23/ansible-automating/">
-            
-                <span>Ansible 从入门到放弃</span>
-        </a>
-        <div class="abstract-content">
-            
-Handler字段handler字段定义的任务可以被task的notify字段引用，用于该task如果执行的结果为changed（即在远端服务器上完成了实际操作），则被引用的handler执行；反之，则不执行。
-handler一般情况都是在所有task执行完之后，若被引用才执行。若果想让task执行完之后立刻执行引用的handler，可以用meta: flush_handlers字段。
-变量变量通过vars字段定义，可以同时定义多个键值对形式的变量，引用变量的格式。还可以将变量分成不同属性，分类引用。如果有大量变量，可以单独使用一个yml文件统一存放变量，通过vars_files字段直...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="ansible">ansible</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/23/command-Sed/">
-            
-                <span>Sed 实记</span>
-        </a>
-        <div class="abstract-content">
-             
-sed编辑命令
-
-
-
-p
-打印匹配行
-
-
-
-
-=
-打印文件行号
-
-
-a\
-在定位行之后追加文本
-
-
-i\
-在定位行之前插入文本
-
-
-d
-删除定位行
-
-
-c\
-用新文本替换定位文本
-
-
-s
-使用替换模式替换相应模式
-
-
-r
-从另一个文件读取文本
-
-
-w
-将文本写入到一个文件
-
-
-y
-变换字符,类似替换
-
-
-q
-第一个模式匹配完成后退出
-
-
-l
-显示与八进制ASCII码等价的控制字符
-
-
-{}
-在定位行执行的命令组
-
-
-n
-读取下一个输入行，用下一个命令处理新的行
-
-
-h
-将模式缓冲区的文本复制到保持缓冲区
-
-
-H
-将模式缓冲区的文本追加到保持缓冲区
-
-
-x
-互换模式缓冲区和保持缓冲区的...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/23</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="shell">shell</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="sed">sed</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="/avatar/Misaka1.jpg">
-    <div class="profile-name">laolees</div>
-    
-    <div class="profile-signature">
-        Me Unafraid
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:laoless@qq.com" class="iconfont-archer email" title="email"></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/laolees" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title="wechat">
-                  
-                  <img class="profile-qr" src="/assets/wechart_2weima.png">
-                </span>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href="http://www.zsythink.net" target="_black">Zhushuangyin</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href="https://zhangguanzhang.github.io" target="_black">Zhangguanzhang</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href="/about">ABOUT ME</a>
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">
